@@ -16,9 +16,9 @@ document.querySelectorAll('.main-nav a').forEach((link) => link.addEventListener
   lucide.createIcons();
 }));
 
-document.querySelector('#booking-form').addEventListener('submit', (event) => {
+const bookingForm = document.querySelector('#booking-form');
+bookingForm?.addEventListener('submit', (event) => {
   event.preventDefault();
-  const message = document.querySelector('.form-message');
-  message.textContent = 'Thank you. Your enquiry is ready to be confirmed by Mariana.';
-  event.target.reset();
+  window.location.href = 'pages/thank-you.html';
 });
+
